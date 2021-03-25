@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/first_fragment"
+        android:tag="com.example.lesson5_1dz.FirstFragment"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_weight="1"
+        tools:layout="@layout/fragment_first"
+        android:name="com.example.lesson5_1dz.FirstFragment"
+        />
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/second_fragment"
+        android:layout_weight="1"
+        android:tag="com.geek.a1_hw5.SecondFragment"
+        app:layout_constraintTop_toBottomOf="@id/first_fragment"
+        tools:layout="@layout/fragment_second"
+        android:name="com.example.lesson5_1dz.SecondFragment"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frame_layout"
+        android:layout_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/second_fragment"
+        />
+
+</LinearLayout>
